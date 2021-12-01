@@ -1,8 +1,8 @@
 # xratejs
 ![xratejs logo](https://i.ibb.co/C1wVJ8h/xratejs-logo-white.png)  
-A simple solution to include the latest currency conversions in your HTML.
-You pass the portfolio as an array of currency_symbol-value pairs inside the from attribute.
-The exhange rates are fetched using the cryptocompare API cryptocompare.com.
+A simple solution to include the latest currency conversions in your HTML.  
+You pass the portfolio as an array of currency_symbol-value pairs inside the from attribute.  
+The exhange rates are fetched using the cryptocompare API cryptocompare.com.  
 Consider using the API with your own API key: https://min-api.cryptocompare.com/pricing 
 
 # Dependencies

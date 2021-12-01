@@ -1,7 +1,8 @@
-
-/*
+/* 
 V1.1 of xratejs
+A simple solution to include the latest currency conversions in your HTML.
 */
+
 function getExchangeRate (requestURL, callback){
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
