@@ -19,15 +19,14 @@ function totalTo(to, valArr, xrate){
         var from = Object.keys(item)[0];
         var rate = xrate[from];
         if(rate != 0){
-            total += item[from]/rate; // TO: USD <--> FROM: BTC = 0.000018, so 4 BTC = (4 BTC / 0.000018)USD
+            total += item[from]/rate;
         }
     });
-    total = total*xrate[to]; // Eg base is EUR (baseTo) but we want to convert to USD (to)
+    total = total*xrate[to];
     return total.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function setExchangeRate(xrate){
-    // This part can probably be optimized
     var io = document.getElementsByClassName("xratejs");
     for(var i = 0; i < io.length; i++) {
         (function(index) {
@@ -37,11 +36,6 @@ function setExchangeRate(xrate){
         })(i);
     }
 }
-
-function getKeyByValue(object, value) {
-    return Object.keys(object).find(key => object[key] === value);
-  }
-  
 
 function constructUrl(){
     var to = [];
@@ -53,7 +47,6 @@ function constructUrl(){
         valArr.forEach((item) => {
             from.push(Object.keys(item)[0]);
         });
-        // Add to to from as well
         if(!from.includes(io[i].getAttribute('to'))){
             from.push(io[i].getAttribute('to'));
         }
